@@ -6,8 +6,9 @@ module tb ();
   reg clk;
   reg rst_n;
   reg ena;
-  reg [7:0] ui_in;
-  wire [7:0] uo_out;
+  reg [7:0] ui_in;   // A
+  reg [7:0] uio_in;  // B + OP
+  wire [7:0] uo_out; // RESULT
 
   // Instancia del módulo principal
   tt_um_allanrodas74 dut (
@@ -28,18 +29,14 @@ module tb ();
   initial begin
     $dumpfile("tb.vcd");
     $dumpvars(0, tb);
-    ena = 1;
-    rst_n = 0;  // Reset inicial
-    #10 rst_n = 1;
+      reg [7:0] ui_in;   // A
+  reg [7:0] uio_in;  // B + OP
+  wire [7:0] uo_out; // RESULT
     
-    // Prueba 1: Suma (a=3, b=5)
-    ui_in = 8'b0000_0011;  // a=3, b=0 (op=00)
+    // Prueba: A=3, B=5, OP=000 (suma)
+    ui_in = 8'd3;
+    uio_in = {3'b000, 5'd5};  // OP=000, B=5
     #20;
-    
-    // Prueba 2: Resta (a=8, b=3)
-    ui_in = 8'b0000_1000;  // a=8, b=0 (op=01)
-    #20;
-    
     $finish;
   end
 endmodule
