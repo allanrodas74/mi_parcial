@@ -14,6 +14,8 @@ module tt_um_allanrodas74(
   
   // Sumador Prefix de 8 bits
   wire [3:0] sum;
+  wire [7:0] b_neg = ~b + 1;
+  wire [7:0] resta;
   prefix_adder_8bit adder(
     .a(a),
     .b(b),
