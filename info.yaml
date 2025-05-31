@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        ""      # Project title
-  author:       ""      # Your name
+  author:       "allan rodas"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  ""      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
@@ -43,14 +43,14 @@ pinout:
   uo[7]: "RESULT[7]"  # Bit 7 del resultado
 
   # Bidirectional pins (usaremos 3 para la operación y 5 para B)
-  uio[0]: "B[0]"     # Bit 0 de entrada B
-  uio[1]: "B[1]"     # Bit 1 de entrada B
-  uio[2]: "B[2]"     # Bit 2 de entrada B
-  uio[3]: "B[3]"     # Bit 3 de entrada B
-  uio[4]: "B[4]"     # Bit 4 de entrada B
-  uio[5]: "OP[0]"    # Bit 0 de código de operación
-  uio[6]: "OP[1]"    # Bit 1 de código de operación
-  uio[7]: "OP[2]"    # Bit 2 de código de operación
+  uio[0]: ""     # Bit 0 de entrada B
+  uio[1]: ""     # Bit 1 de entrada B
+  uio[2]: ""     # Bit 2 de entrada B
+  uio[3]: ""     # Bit 3 de entrada B
+  uio[4]: ""     # Bit 4 de entrada B
+  uio[5]: ""    # Bit 0 de código de operación
+  uio[6]: ""    # Bit 1 de código de operación
+  uio[7]: ""    # Bit 2 de código de operación
 
 # Do not change!
 yaml_version: 6
