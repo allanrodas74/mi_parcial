@@ -5,9 +5,9 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_user_module.v \
-                  tt_prefixx_adder_8bit.v
-
+PROJECT_SOURCES = ./tb.v \
+                  ../src/tt_user_module.v \
+                  ../src/tt_prefixx_adder_8bit.v
 ifneq ($(GATES),yes)
 
 # RTL simulation:
