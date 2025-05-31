@@ -2,12 +2,14 @@
 module tt_um_allanrodas74(
   input [7:0] ui_in,
   output [7:0] uo_out
+   input [7:0] uio_in,   // B[7:0] (o B[4:0] + OP[2:0])
+   input ena, clk, rst_n
 );
   // Entradas
-  wire [3:0] a = ui_in[3:0];
-  wire [3:0] b = ui_in[7:4];
-  wire [1:0] op = ui_in[6:5];
-  
+wire [7:0] a = ui_in;
+    wire [7:0] b = uio_in;  // Usa todos los 8 bits para B
+    wire [2:0] op = uio_in[7:5];  // OP en los bits superiores de uio_in
+
   // Salidas
   reg [7:0] result;
   assign ui_out = result;
