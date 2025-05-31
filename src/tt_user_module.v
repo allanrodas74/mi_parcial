@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module tt_um_allanrodas74(
   input [7:0] io_in,
   output [7:0] io_out
